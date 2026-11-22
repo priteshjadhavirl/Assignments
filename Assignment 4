@@ -1,0 +1,22 @@
+import numpy as np
+
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+print("\nEnter elements for Matrix A:")
+A_list = [[int(input(f"A[{i}][{j}]: ")) for j in range(cols)] for i in range(rows)]
+
+print("\nEnter elements for Matrix B:")
+B_list = [[int(input(f"B[{i}][{j}]: ")) for j in range(cols)] for i in range(rows)]
+
+A_np = np.array(A_list)
+B_np = np.array(B_list)
+
+result_list = [[A_list[i][j] + B_list[i][j] for j in range(cols)] for i in range(rows)]
+result_np = A_np + B_np
+
+print("\nMatrix Addition (Using Lists):")
+print(result_list)
+
+print("\nMatrix Addition (Using NumPy):")
+print(result_np)
