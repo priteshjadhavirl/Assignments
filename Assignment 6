@@ -1,0 +1,17 @@
+import pandas as pd
+
+file_name = r'C:/Users/Admin/Downloads/array (2).xlsx'
+
+if file_name.endswith('.csv'):
+    df = pd.read_csv(file_name)
+elif file_name.endswith(('.xls', '.xlsx')):
+    df = pd.read_excel(file_name)
+
+print('Original Data (First five rows)')
+display(df.head())
+
+print('\nDataset information')
+print(df.info())
+
+print('\nMissing Values Count:')
+print(df.isnull().sum())
