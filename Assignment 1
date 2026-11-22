@@ -1,0 +1,34 @@
+my_tuple = ("Python", "Java", "C++")
+print("Original Tuple:", my_tuple)
+
+print("First element:", my_tuple[0])
+
+my_tuple = my_tuple + ("JavaScript",)
+print("Tuple after appending 'JavaScript':", my_tuple)
+
+temp_list = list(my_tuple)
+temp_list.remove("Java")
+my_tuple = tuple(temp_list)
+print("Tuple after removing 'Java':", my_tuple)
+
+my_dict = {
+    "name": "Alice",
+    "age": 20,
+    "course": "Computer Science"
+}
+print("\nOriginal Dictionary:", my_dict)
+
+print("Name:", my_dict["name"])
+
+my_dict["grade"] = "A"
+print("Dictionary after adding 'grade':", my_dict)
+
+my_dict["age"] = 21
+print("Dictionary after updating 'age':", my_dict)
+
+removed_val = my_dict.pop("course")
+print("Dictionary after removing 'course':", my_dict)
+
+my_dict.clear()
+print("Dictionary after clear():", my_dict)
+
